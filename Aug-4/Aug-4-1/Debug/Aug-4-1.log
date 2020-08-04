@@ -1,0 +1,6 @@
+﻿  Linklist.cpp
+d:\ds\ds\aug-4\aug-4-1\linklist.cpp(24): warning C4553: '==': result of expression not used; did you intend '='?
+  main.cpp
+d:\ds\ds\aug-4\aug-4-1\main.cpp(3): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating Code...
+  Aug-4-1.vcxproj -> D:\DS\DS\Aug-4\Debug\Aug-4-1.exe
