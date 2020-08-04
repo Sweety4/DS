@@ -1,6 +1,2 @@
-﻿  Linklist.cpp
-d:\ds\ds\aug-4\aug-4-1\linklist.cpp(16): warning C4101: 'i': unreferenced local variable
-  Node.cpp
-  main.cpp
-  Generating Code...
+﻿  main.cpp
   Aug-4-1.vcxproj -> D:\DS\DS\Aug-4\Debug\Aug-4-1.exe

@@ -22,7 +22,7 @@ void LinkList::CreateLinkList(int terms)
 		cin >> data;
 		newnode = CreateNode(data);
 		if (head == NULL)
-			head == newnode;
+			head = newnode;
 		else
 		{
 			move = head;

@@ -1,8 +1,4 @@
 #include"linklist.h"
-void AddTwoLinklist(Linklist l1, Linklist l2)
-{
-
-}
 int main()
 {
 	Linklist list1;
