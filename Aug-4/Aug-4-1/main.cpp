@@ -1,12 +1,21 @@
-#include"Linklist.h"
-void main()
+#include"linklist.h"
+void AddTwoLinklist(Linklist l1, Linklist l2)
+{
+
+}
+int main()
 {
 	Linklist list1;
-	int noofNodes;
-	cout << "\n\n\t Enter Number of Nodes";
-	cin >> noofNodes;
-
-	list1.CreatLinkList(noofNodes);
+	int no;
+	cout << "\n\n\t Enter Number of node for linklist ";
+	cin >> no;
+	list1.createLinklist(no);
 	list1.Display();
-	cout << "\n\n\n";
+
+	///list1.Add(list2);
+
+
+
+	cout << "\n\n\t";
+
 }

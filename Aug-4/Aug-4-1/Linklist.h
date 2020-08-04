@@ -1,11 +1,12 @@
-#pragma once
-#include"Node.h"
+#define _CRT_SECURE_NO_WARNINGS
+#include"node.h"
 class Linklist
 {
 	Node *head;
 public:
 	Linklist();
-	Node* CreateNode(int);
-	void CreatLinkList(int);
+	Node *createNode(int);
+	void createLinklist(int);
+
 	void Display();
 };

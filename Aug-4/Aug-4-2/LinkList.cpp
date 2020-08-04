@@ -3,7 +3,7 @@ LinkList::LinkList()
 {
 	head = NULL;
 }
-Node* LinkList::CreateNode(Employee data)
+Node *LinkList::CreateNode(Employee data)
 {
 	Node *record;
 	record = new Node;

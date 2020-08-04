@@ -3,34 +3,41 @@ Linklist::Linklist()
 {
 	head = NULL;
 }
-Node* Linklist:: CreateNode(int data)
+Node *Linklist::createNode(int data)
 {
 	Node *record;
-	record = new Node;
+	record = new Node();
 	record->setData(data);
 	record->setNext(NULL);
 	return record;
 }
-void Linklist::CreatLinkList(int terms)
+void Linklist::createLinklist(int no)
 {
 	int i, data;
 	Node *newnode, *move;
-	for (i = 1; i <= terms; i++)
+	for (int i = 0; i < no; i++)
 	{
-		cout << "\n\n\t Enter Data";
+		cout << "\n\n\t Enter interger data to insert ";
 		cin >> data;
-		newnode = CreateNode(data);
+		newnode = createNode(data);
+		//  check if it is first node or not
 		if (head == NULL)
-			head == newnode;
+		{
+			head = newnode;
+			//cout << "\n\n\t ROOT Node Created !! ";
+		}
 		else
 		{
+			//link the node to linklist
 			move = head;
 			while (move->getNext() != NULL)
 			{
 				move = move->getNext();
 			}
 			move->setNext(newnode);
+			//cout << "\n\t New Node Added !!! ";
 		}
+
 	}
 }
 void Linklist::Display()
@@ -40,6 +47,7 @@ void Linklist::Display()
 	while (move != NULL)
 	{
 		cout << "\n\n\t" << move << "\t" << move->getData() << "\t" << move->getNext();
+
 		move = move->getNext();
 	}
 }

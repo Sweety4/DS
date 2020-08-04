@@ -1,4 +1,5 @@
 #include"LinkList.h"
+
 void main()
 {
 	LinkList list1;

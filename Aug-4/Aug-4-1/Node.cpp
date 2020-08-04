@@ -1,33 +1,26 @@
 #include"Node.h"
 Node::Node()
 {
-	data = 1;
+	data = 0;
 	next = NULL;
-
 }
-
-Node::Node(int d, Node* n)
-{
-	data = d;
-	next = n;
-}
-
 int Node::getData()
 {
 	return data;
 }
-
+void Node::nodeDisplay()
+{
+	cout << "\n\t " << this << "\t" << data << "\t" << this->next;
+}
 Node* Node::getNext()
 {
 	return next;
 }
-
 void Node::setData(int data)
 {
-	this->data;
+	this->data = data;
 }
-
-void Node::setNext(Node* next)
+void Node::setNext(Node *next)
 {
-	this->next;
+	this->next = next;
 }
