@@ -1,0 +1,7 @@
+﻿  LinkList.cpp
+d:\ds\ds\aug-5\aug-5-1\linklist.cpp(27): warning C4101: 'i': unreferenced local variable
+d:\ds\ds\aug-5\aug-5-1\linklist.cpp(96): warning C4101: 'i': unreferenced local variable
+  Main.cpp
+  Generating Code...
+d:\ds\ds\aug-5\aug-5-1\linklist.cpp(75): error C4700: uninitialized local variable 'cnt' used
+d:\ds\ds\aug-5\aug-5-1\linklist.cpp(12): error C4700: uninitialized local variable 'cnt' used

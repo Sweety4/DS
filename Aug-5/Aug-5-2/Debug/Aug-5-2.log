@@ -1,0 +1,7 @@
+﻿  LinkList.cpp
+d:\ds\ds\aug-5\aug-5-2\linklist.cpp(31): warning C4101: 'i': unreferenced local variable
+d:\ds\ds\aug-5\aug-5-2\linklist.cpp(62): warning C4101: 'temp': unreferenced local variable
+  main.cpp
+  Node.cpp
+  Generating Code...
+  Aug-5-2.vcxproj -> D:\DS\DS\Aug-5\Debug\Aug-5-2.exe
