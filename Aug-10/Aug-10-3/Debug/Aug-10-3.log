@@ -1,0 +1,10 @@
+﻿  main.cpp
+d:\ds\ds\aug-10\aug-10-3\main.cpp(3): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Pre_Stack.cpp
+d:\ds\ds\aug-10\aug-10-3\pre_stack.cpp(47): warning C4305: 'initializing': truncation from 'int' to 'char'
+d:\ds\ds\aug-10\aug-10-3\pre_stack.cpp(47): warning C4309: 'initializing': truncation of constant value
+d:\ds\ds\aug-10\aug-10-3\pre_stack.cpp(64): warning C4129: ' ': unrecognized character escape sequence
+d:\ds\ds\aug-10\aug-10-3\pre_stack.cpp(165): error C3867: 'cStack::Peek': non-standard syntax; use '&' to create a pointer to member
+d:\ds\ds\aug-10\aug-10-3\pre_stack.cpp(165): error C2446: '==': no conversion from 'int' to 'char (__thiscall cStack::* )(void)'
+  d:\ds\ds\aug-10\aug-10-3\pre_stack.cpp(165): note: There are no conversions from integral values to pointer-to-member values
+  Generating Code...

@@ -1,0 +1,7 @@
+﻿  Book.cpp
+  main.cpp
+d:\ds\ds\aug-10\aug-10-1\main.cpp(3): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Node.cpp
+  Stack.cpp
+  Generating Code...
+  Aug-10-1.vcxproj -> D:\DS\DS\Aug-10\Debug\Aug-10-1.exe

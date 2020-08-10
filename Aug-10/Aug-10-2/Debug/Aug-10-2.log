@@ -1,0 +1,9 @@
+﻿  Stack.cpp
+d:\ds\ds\aug-10\aug-10-2\stack.cpp(47): warning C4305: 'initializing': truncation from 'int' to 'char'
+d:\ds\ds\aug-10\aug-10-2\stack.cpp(47): warning C4309: 'initializing': truncation of constant value
+d:\ds\ds\aug-10\aug-10-2\stack.cpp(64): warning C4129: ' ': unrecognized character escape sequence
+  main.cpp
+d:\ds\ds\aug-10\aug-10-2\main.cpp(3): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating Code...
+d:\ds\ds\aug-10\aug-10-2\stack.cpp(83): warning C4715: 'Priority': not all control paths return a value
+  Aug-10-2.vcxproj -> D:\DS\DS\Aug-10\Debug\Aug-10-2.exe
