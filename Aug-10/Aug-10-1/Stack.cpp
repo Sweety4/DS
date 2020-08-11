@@ -12,10 +12,10 @@ Node* cStack::CreateNode(Book data)
 	record -> setNext(NULL);
 	return record;
 }
-void cStack::Push(int)
+void cStack::Push(Book data)
 {
 	Node *newnode;
-	Book data;
+	
 	newnode = CreateNode(data);
 	if (top == NULL)
 		top = newnode;
@@ -25,9 +25,8 @@ void cStack::Push(int)
 		top = newnode;
 	}
 }
-int cStack::pop()
+Book cStack::pop()
 {
-	//Book data;
 	Book ele ;
 	Node *del;
 	if (!ISEmpty())
@@ -37,29 +36,21 @@ int cStack::pop()
 		ele = del->getData();
 		delete del;
 	}
-	return 22;
+	return ele;
 }
 void cStack::Display()
 {
-	//Node *move;
-	//move = top;
-	cout << "\n\n\t ***************stack**************";
+	
+	cout << "\n\n ================= stack ======================";
 	Node *move;
 	move = top;
 	while (move != NULL)
 	{
-		cout << "\n\n\t" << move << "\t";
-		move->getData().Display();
-		cout << "\t" << move->getNext();
+		cout << "\n\t\t";
+		(move->getData().Display());
 		move = move->getNext();
 	}
-	/*while (move != NULL)
-	{
-		cout << "\n\n\t" << move->getData();
-		move = move->getData();
-	}*/
-	//for (move = top; move != NULL; move = move->getNext())
-		//cout << "\n\t" << move->getData();
+	
 }
 int cStack::ISEmpty()
 {

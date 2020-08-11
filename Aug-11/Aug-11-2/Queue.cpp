@@ -55,6 +55,6 @@ void Queue::Display()
 	{
 		cout << " " << arr[i];
 	}
-	cout << " <--";
+	cout << "\t <--";
 
 }

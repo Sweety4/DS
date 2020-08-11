@@ -29,7 +29,7 @@ void Book::Accept()
 }
 void Book::Display()
 {
-	cout << "\n*************Book Details***************************";
+	cout << "\n\t ~~ Book Details ~~";
 	cout << "\n\n\t Book No :" << BookNo;
 	cout << "\n\n\t Book name :" << B_name;
 	cout << "\n\n\t Book Price :" << price;

@@ -1,16 +1,25 @@
 #include"Pre_Stack.h"
+
 cStack::cStack()
 {
 	size = 5;
 	top = -1;
-	arr = new char[size];
+	arr = new char[size];;
 }
 cStack::cStack(int sz)
 {
 	size = sz;
 	top = -1;
-	arr = new char[size];
+	arr = new char[sz];
 }
+int cStack::IsFull()
+{
+	if (top == (size - 1))
+		return 1;
+	else
+		return 0;
+}
+
 int cStack::IsEmpty()
 {
 	if (top == -1)
@@ -18,153 +27,171 @@ int cStack::IsEmpty()
 	else
 		return 0;
 }
-int cStack::IsFull()
+
+void cStack::Push(char value)
 {
-	if (top == size - 1)
+	if (IsFull() == 0)
+	{
+		arr[++top] = value;
+	}
+	else
+		cout << "\n\tERROR: STACK is FULL....";
+}
+void Reverse(char *s)
+{
+	char *t = s, temp;
+	while (*t != '\0')
+		t++;
+	t--;
+	while (s < t)
+	{
+		temp = *s;
+		*s = *t;
+		*t = temp;
+		s++;
+		t--;
+	}
+}
+char cStack::Pop()
+{
+	char value = -9999;
+	if (IsEmpty() == 0)
+	{
+		value = arr[top--];
+	}
+	return value;
+}
+char cStack::Peek()
+{
+	int value = -9999;
+	if (IsEmpty() == 0)
+	{
+		value = arr[top];
+	}
+	return value;
+}
+
+/*int Stack::Pop()
+{
+int value=-999;
+if(isEmpty()==0)
+{
+value = stk[top];
+top--;
+}
+return value;
+}*/
+
+void cStack::Display()
+{
+	int i;
+	if (!IsEmpty())
+	{
+		for (i = top; i>-1; i--)
+			cout << "\n\t" << arr[i];
+	}
+	else
+		cout << "\n\tERROR: STACK is EMPTY....";
+}
+
+cStack::~cStack()
+{
+	if (arr != NULL)
+	{
+		delete[]arr;
+	}
+	arr = NULL;
+}
+int IsOperand(char ch)
+{
+	if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122) || (ch >= 48 && ch <= 57))
 		return 1;
 	else
 		return 0;
 }
-void cStack::push(char ele)
+int IsOperator(char ch)
 {
-	char res;
-	res = IsFull();
-	if (res == 0)
-	{
-		top++;
-		arr[top] = ele;
-	}
-	else
-		cout << "\n\n\t Stack Is full !!! ";
-}
-char cStack::Peek()
-{
-	return arr[top];
-}
-
-char cStack::pop()
-{
-	char ele = -9999;
-	int res;
-	res = IsEmpty();
-
-	if (res == 0)
-	{
-		ele = arr[top];
-		top--;
-	}
-
-	return ele;
-}
-
-void cStack::Display()
-{
-	cout << "\n\n\t *********** Stack Is **********\n";
-	for (int i = top; i >= 0; i--)
-		cout << "\n\  " << arr[i];
-
-}
-cStack::~cStack()
-{
-	delete[]arr;
-}
-int Priority(char ch)
-{
-	switch (ch)
-	{
-	case '+':
-	case '-':
+	if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || \
+		ch == '%' || ch == '$' || ch == '(' || ch == ')')
 		return 1;
-	case '*':
-	case '/':
-	case '%':
-		return 2;
-	}
+	else
+		return 0;
 }
 
-void Convert(char *in, char *pre)
+int Priority(char ope)
 {
-  cStack st(strlen(in) + 1);
-   int i, j = 0;
-  char ch;
-  //reverse(in.begin(), in.end());
+	int Flag = 0;
+	switch (ope)
+	{
+	case '-':
+	case '+':
+		Flag = 1;
+		break;
 
-  for (int i = 0; in[i] != '\0'; i++) {
-	if (in[i] == '(') {
-		in[i] = ')';
-	}
-	else if (in[i] == ')') {
-		in[i] = '(';
-	}
-  }
-  for (int i = 0; in[i] != '\0'; i++) {
-	if ((in[i] >= 'a' && in[i] <= 'z') || (in[i] >= 'A' && in[i] <= 'Z')) {
-		pre += ch;
-	}
-	else if (in[i] == '(') {
-		st.push(in[i]);
-	}
-	else if (in[i] == ')') {
-		while ((st.Peek() != '(') && (!st.IsEmpty())) {
-			pre += ch;
-			st.pop();
-		}
+	case '/':
+	case '*':
+	case '%':
+		Flag = 2;
+		break;
 
-		if (st.Peek == '(') {
-			st.pop();
-		}
-	}
-	else if (Priority(in[i])) {
-		if (st.IsEmpty()) {
-			st.push(in[i]);
-		}
-		else {
-			if (Priority(in[i]) > Priority(st.Peek())) {
-				st.push(in[i]);
-			}
-			else if ((Priority(in[i]) == Priority(st.Peek()))
-				&& (in[i] == '^')) {
-				while ((Priority(in[i]) == Priority(st.Peek()))
-					&& (in[i] == '^')) {
-					pre += ch;
-					st.pop();
-				}
-				st.push(in[i]);
-			}
-			else if (Priority(in[i]) == Priority(st.Peek())) {
-				st.push(in[i]);
-			}
-			else {
-				while ((!st.IsEmpty()) && (Priority(in[i]) < Priority(st.Peek()))) {
-					pre += ch;
-					st.pop();
-				}
-				st.push(in[i]);
-			}
-		}
-	}
-  }
+	case '$':
+		Flag = 3;
+		break;
 
-   while (!st.IsEmpty()) {
-	   pre += ch;
-	st.pop();
-   }
-
-  //reverse(ch.begin(), ch.end());
-  //return ch;
+	}
+	return Flag;
 }
 
+void Convert_Infix_Pre(char * Infix, char * prefix)
+{
+	cStack st(strlen(Infix) + 1);
+	int i, j;
+	char x;
+	//Step : 1 
+	// Reverse the Infix Expression
+	Reverse(Infix);
+	//Step : 2
+	//Exchange Brackets 
+	for (int i = 0; Infix[i] != '\0'; i++)
+	{
+		if (Infix[i] == '(')
+			Infix[i] = ')';
+		else if (Infix[i] == ')')
+			Infix[i] = '(';
+	}
+	//Step 3: 
+	// Conver it into Postfix
+	for (i = 0, j = 0; Infix[i] != '\0'; i++)
+	{
+		if (IsOperand(Infix[i]))
+			prefix[j++] = Infix[i];
+		else if (Infix[i] == '(')
+			st.Push(Infix[i]);
+		else if (Infix[i] == ')')
+		{
+			while ((x = st.Pop()) != '(')
+			{
+				prefix[j++] = x;
+			}
+		}
+		else if (st.IsEmpty() == 0 && Priority(Infix[i]) <= Priority(st.Peek()))
+		{
+			while (st.IsEmpty() == 0 && Priority(Infix[i]) <= Priority(st.Peek()))
+				prefix[j++] = st.Pop();
+			st.Push(Infix[i]);
+		}
+		else
+			st.Push(Infix[i]);
+	}
+	while (st.IsEmpty() == 0)
+	{
+		x = st.Pop();
+		prefix[j++] = x;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
+	prefix[j] = '\0';
+	// Step : 4
+	//Reverse the answer 
+	Reverse(prefix);
+}
 

@@ -28,7 +28,7 @@ void Employee::Display()
 
 ostream& operator<<(ostream& out, Employee& e)
 {
-	out << "\n\t " << e.id << "\t" << e.name;
+	out << "\t " << e.id << "\t" << e.name;
 	return out;
 }
 

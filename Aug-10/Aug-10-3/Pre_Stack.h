@@ -1,22 +1,22 @@
-#pragma once
+#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
-#include<stack>
+#include<stdlib.h>
 using namespace std;
+
 class cStack
 {
-	int size, top;
+	int size;
+	int top;
 	char *arr;
 public:
 	cStack();
 	cStack(int);
-	int IsEmpty();
 	int IsFull();
-	void push(char);
-	char pop();
+	int IsEmpty();
+	void Push(char);
+	char Pop();
 	char Peek();
 	void Display();
 	~cStack();
 };
-int Priority(char*);
-void Convert(char*, char*);
-
+void Convert_Infix_Pre(char * Infix, char * Postfix);

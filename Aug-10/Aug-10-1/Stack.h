@@ -10,8 +10,8 @@ class cStack
 	Node *CreateNode(Book);
 public:
 	cStack();
-	void Push(int);
-	int pop();
+	void Push(Book);
+	Book pop();
 	void Display();
 	int ISEmpty();
 	//Node *createNode(Book);

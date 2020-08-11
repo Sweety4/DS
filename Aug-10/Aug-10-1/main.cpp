@@ -2,7 +2,9 @@
 void main()
 {
 	cStack s1;
-	int ele, ch;
+	int ch;
+	Book value;
+
 	do {
 		cout << "\n\n\t\t1. Push\
                \n\t\t2. Pop\
@@ -13,19 +15,17 @@ void main()
 		switch (ch)
 		{
 		case 1:
-			cout << "\n\n\t Enter data to insert ";
-			cin >> ele;
-			s1.Push(ele);
+			cout << "\n\n\t Enter data to push ";
+			cin >> value;
+			s1.Push(value);
+			break;
 		case 2:
-			ele = s1.pop();
-			if (ele == ERROR)
-				cout << "\n\n\t Stack is empty !!!";
-			else
-				cout << "\n\n\t Deleted ele is " << ele;
+			value = s1.pop();
+				cout << "\n\n\t Poped ele is " << value;
 			break;
 		case 3:
 			s1.Display();
-
+			break;
 		default:
 			cout << "\n\n wrong choice !!!";
 		}

@@ -1,11 +1,12 @@
 #include"Pre_Stack.h"
+
 void main()
 {
-
-	char infix[20], pre[20];
-	cout << "\n\n\t Enter Infix String :";
+	char infix[20], pre[30];
+	cout << "\n\n\t Enter Infix Expression ";
 	cin >> infix;
-	Convert(infix, pre);
-	cout << "\n\n\t Prefix Expression :" << pre;
+	Convert_Infix_Pre(infix, pre);
+	cout << "\n\n\t Prefix : " << pre;
 	cout << "\n\n\n";
+
 }
