@@ -51,52 +51,44 @@ cNode* cTree::CreateNode(int data)
 
 void cTree::AddNode(int data)
 {
-	cNode *newnode, *move;
-	char ch;
-	newnode = CreateNode(data);
-	if (root == NULL)
 	{
-		root = newnode;
-		cout << "\n\n\t Root Created !!!!";
-	}
-	else
-	{
-		move = root;
-		while (1)   //infinite loop
+		cNode* newnode = CreateNode(data);
+		cNode* move;
+		if (root == NULL)
 		{
-			cout << "\n\n\t Where you want to Attach node at left or right of (L/R) :";
-			move->getData();
-			cin >> ch;
-			if (ch == 'L' || ch == 'l')
-			{
-				if (move->getLeft() == NULL)
-				{
-					move->setLeft(newnode);
-					cout << "\n\n\t Node Attached to left of " << move->getData();
-					break;
-				}
-				else
-					move = move->getLeft();
-			}
-			else if (ch == 'R' || ch == 'r')
-			{
-				if (move->getRight() == NULL)
-				{
-					move->setRight(newnode);
-					cout << "\n\n\t Node Attached to right of " << move->getData();
-					break;
-				}
-				else
-					move = move->getRight();
-			}
-			else
-			{
-				cout << "\n\n\t wrong option selected !!!!";
-				break;
-			}
-
+			root = newnode;
+			cout << "\n\n\t Root Created !!!!";
 		}
-
+		else
+		{
+			move = root;
+			while (1)
+			{
+				if (move->getData() > data)
+				{
+					if (move->getLeft() == NULL)
+					{
+						move->setLeft(newnode);
+						cout << "\n\n\t Node Attached to left of " << move->getData();
+						break;
+					}
+					else
+					move = move->getLeft();
+				}
+				else
+				{
+					if (move->getRight() == NULL)
+					{
+						move->setRight(newnode);
+						cout << "\n\n\t Node Attached to right of " << move->getData();
+						break;
+					}
+					else
+					move = move->getRight();
+				}
+				
+			}
+		}
 	}
 
 }
