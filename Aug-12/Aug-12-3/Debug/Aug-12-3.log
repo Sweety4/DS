@@ -1,0 +1,5 @@
+﻿  main.cpp
+d:\ds\ds\aug-12\aug-12-3\main.cpp(3): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  PriQueue.cpp
+  Generating Code...
+  Aug-12-3.vcxproj -> D:\DS\DS\Aug-12\Debug\Aug-12-3.exe

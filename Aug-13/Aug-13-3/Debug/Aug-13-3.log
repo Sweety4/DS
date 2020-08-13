@@ -1,0 +1,3 @@
+﻿  QuickSort.cpp
+d:\ds\ds\aug-13\aug-13-3\quicksort.cpp(43): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Aug-13-3.vcxproj -> D:\DS\DS\Aug-13\Debug\Aug-13-3.exe
