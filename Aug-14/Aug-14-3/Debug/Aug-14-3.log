@@ -1,0 +1,10 @@
+﻿  main.cpp
+d:\ds\ds\aug-14\aug-14-3\main.cpp(4): warning C4326: return type of 'main' should be 'int' instead of 'void'
+d:\ds\ds\aug-14\aug-14-3\main.cpp(16): warning C4018: '<': signed/unsigned mismatch
+d:\ds\ds\aug-14\aug-14-3\main.cpp(17): error C2676: binary '[': 'std::stack<cPerson,std::deque<_Ty,std::allocator<_Ty>>>' does not define this operator or a conversion to a type acceptable to the predefined operator
+          with
+          [
+              _Ty=cPerson
+          ]
+  Person.cpp
+  Generating Code...

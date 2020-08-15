@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\ds\ds\aug-14\aug-14-2\main.cpp(4): warning C4326: return type of 'main' should be 'int' instead of 'void'
+d:\ds\ds\aug-14\aug-14-2\main.cpp(16): warning C4018: '<': signed/unsigned mismatch
+  Aug-14-2.vcxproj -> D:\DS\DS\Aug-14\Debug\Aug-14-2.exe
