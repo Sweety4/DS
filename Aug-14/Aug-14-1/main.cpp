@@ -8,6 +8,7 @@ void main()
 	{
 		cout << "\n\n\t\t1.AddNode\
                  \n\t\t2.Display\
+                 \n\t\t3.Delete Node\
                 \n\t\t0.Exit\
                  \n\t Enter your choice :";
 		cin >> ch;
@@ -20,6 +21,11 @@ void main()
 			break;
 		case 2:
 			t1.Display();
+			break;
+		case 3:
+			cout << "\n\n\t Enter Data To Delete ";
+			cin >> data;
+			t1.DelNode(data);
 			break;
 		default:
 			cout << "\n\n \t wrong choice !!!!";

@@ -1,6 +1,3 @@
 ﻿  main.cpp
 d:\ds\ds\aug-14\aug-14-1\main.cpp(3): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  Node.cpp
-  Tree.cpp
-  Generating Code...
-  Aug-14-1.vcxproj -> D:\DS\DS\Aug-14\Debug\Aug-14-1.exe
+LINK : fatal error LNK1168: cannot open D:\DS\DS\Aug-14\Debug\Aug-14-1.exe for writing
