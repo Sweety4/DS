@@ -1,0 +1,3 @@
+﻿  main.cpp
+d:\ds\ds\aug-17\aug-17-1\main.cpp(4): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Aug-17-1.vcxproj -> D:\DS\DS\Aug-17\Debug\Aug-17-1.exe
