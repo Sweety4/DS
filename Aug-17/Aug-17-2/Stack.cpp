@@ -46,7 +46,7 @@ int cStack::pop()
 }
 void cStack::Display()
 {
-	cout << "\n\n\t *****************Stack is**********\n";
+	cout << "\n\n************** Stack Is ************\n";
 	for (int i = top; i >= 0; i--)
 		cout << "\n\n " << arr[i];
 

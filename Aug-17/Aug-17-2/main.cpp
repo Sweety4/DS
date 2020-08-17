@@ -6,21 +6,35 @@ void main()
 	cStack s1;
 	Queue q1;
 	int arr[10];
-	int n, remainder;
-
-	cout << "Enter 10  number : ";
-	for (int i = 0; i < n; i++)
-		cout << arr[i] << " ";
 	
+	cout << "Enter 10  numbers : ";
+	for (int i = 0; i < 10; i++)
+	{
+		
+		cin >> arr[i];
+	}
 	
-	remainder = n % 2;
-
-	if (remainder == 0)
-		cout << n << " is an even integer " << endl;
-	else
-		cout << n << " is an odd integer " << endl;
-
+	for (int i = 0; i < 10; i++)
+	{
+		cout << " " << arr[i];
+	}
 	
+	for (int i = 0; i < 10; i++)
+	{
 
+		if (arr[i] % 2 == 0)
+		{
+			//cout << " is an even integer " << endl;
+			s1.Push(arr[i]);
+		}
+		else
+
+			//cout << " is an odd integer " << endl;
+			q1.EnQueue(arr[i]);
+
+	}
+	s1.Display();
+	q1.Display();
+	cout << "\n\n";
 
 }

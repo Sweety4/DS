@@ -49,7 +49,8 @@ int Queue::DeQueue()
 }
 void Queue::Display()
 {
-	cout << "\n\t <--";
+	cout << "\n\n************ Queue Is **************";
+	cout << "\n\n\t <--";
 
 	for (int i = front + 1; i <= rear; i++)
 	{
