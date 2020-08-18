@@ -1,0 +1,5 @@
+﻿  Tree.cpp
+  main.cpp
+d:\ds\ds\aug-18\aug-18-1\main.cpp(3): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating Code...
+  Aug-18-1.vcxproj -> D:\DS\DS\Aug-18\Debug\Aug-18-1.exe

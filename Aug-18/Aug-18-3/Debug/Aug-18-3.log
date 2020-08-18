@@ -1,0 +1,5 @@
+﻿  Graph.cpp
+  main.cpp
+d:\ds\ds\aug-18\aug-18-3\main.cpp(4): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating Code...
+  Aug-18-3.vcxproj -> D:\DS\DS\Aug-18\Debug\Aug-18-3.exe
