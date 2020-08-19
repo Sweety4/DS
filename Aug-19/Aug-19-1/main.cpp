@@ -11,6 +11,7 @@ void main()
 	g.AddEdge(4, 5);
 	g.PrintAdjList();
 	g.DFS(0);
+	g.BFS(0);
 
 	cout << "\n\n";
 	

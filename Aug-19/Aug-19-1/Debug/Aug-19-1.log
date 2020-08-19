@@ -1,3 +1,4 @@
-﻿  main.cpp
-d:\ds\ds\aug-19\aug-19-1\main.cpp(4): warning C4326: return type of 'main' should be 'int' instead of 'void'
+﻿  AdjListGraph.cpp
+d:\ds\ds\aug-19\aug-19-1\adjlistgraph.cpp(56): warning C4101: 'temp': unreferenced local variable
+d:\ds\ds\aug-19\aug-19-1\adjlistgraph.cpp(56): warning C4101: 'no': unreferenced local variable
   Aug-19-1.vcxproj -> D:\DS\DS\Aug-19\Debug\Aug-19-1.exe

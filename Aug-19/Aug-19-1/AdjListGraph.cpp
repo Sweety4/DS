@@ -1,4 +1,6 @@
 #include"AdjListGraph.h"
+#include<list>
+#include<queue>
 Graph::Graph()
 {
 	ver = 4;
@@ -28,12 +30,10 @@ void Graph::PrintAdjList()
 }
 void Graph::DFS(int st)
 {
+	cout << "\n\n************** DFS Is *************\n\n";
 	int *vis = new int[ver];
 	for (int i = 0; i < ver; i++)
-		vis[i];
-
-	cout << "\n\n\t ************** DFS Is *************\n\n";
-	vis[st] = 1;
+		vis[i]=0;
 	TravDFS(st, vis);
 }
 void Graph::TravDFS(int st, int*vis)
@@ -43,10 +43,42 @@ void Graph::TravDFS(int st, int*vis)
 	list<int>::iterator itr;
 	for (itr = graph[st].begin(); itr != graph[st].end(); itr++)
 	{
-		if (vis[*itr] == 0)
+		if (!vis[*itr])
 		{
 			TravDFS(*itr, vis);
 		}
 	}
 
+}
+
+void Graph::BFS(int st)
+{
+	int temp, no;
+	list<int> queue;
+	vis = new int[ver];
+
+	for (int i = 0; i < ver; i++)
+		vis[i] = 0;
+
+	vis[st] = 1;
+	queue.push_back(st);
+	cout << " \n\n******** BFS Is ************\n\n ";
+	list<int>::iterator i;
+
+	while (!queue.empty())
+	{
+		int temp = queue.front();
+		cout << " " << temp;
+		queue.pop_front();
+
+		for (i = graph[temp].begin(); i != graph[temp].end(); ++i)
+		{
+			int no = *i;
+			if (!vis[no])
+			{
+				vis[no] = true;
+				queue.push_back(no);
+			}
+		}
+	}
 }

@@ -6,6 +6,7 @@ class Graph
 {
 	int ver;
 	list<int>*graph;
+	int *vis;
 public:
 	Graph();
 	Graph(int);
@@ -13,6 +14,7 @@ public:
 	void PrintAdjList();
 	void DFS(int);
 	void TravDFS(int, int*);
+	void BFS(int);
 };
 
 
