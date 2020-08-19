@@ -14,4 +14,5 @@ public:
 	void OutDegree();
 	void DFS(int);
 	void TravDFS(int*, int);
+	void BFS(int);
 };

@@ -1,7 +1,2 @@
 ﻿  TBST.cpp
-d:\ds\ds\aug-18\aug-18-2\tbst.cpp(84): error C3867: 'Node::getLThread': non-standard syntax; use '&' to create a pointer to member
-d:\ds\ds\aug-18\aug-18-2\tbst.cpp(84): error C2446: '==': no conversion from 'int' to 'char (__thiscall Node::* )(void)'
-  d:\ds\ds\aug-18\aug-18-2\tbst.cpp(84): note: There are no conversions from integral values to pointer-to-member values
-d:\ds\ds\aug-18\aug-18-2\tbst.cpp(99): error C3867: 'Node::getRThread': non-standard syntax; use '&' to create a pointer to member
-d:\ds\ds\aug-18\aug-18-2\tbst.cpp(99): error C2446: '==': no conversion from 'int' to 'char (__thiscall Node::* )(void)'
-  d:\ds\ds\aug-18\aug-18-2\tbst.cpp(99): note: There are no conversions from integral values to pointer-to-member values
+  Aug-18-2.vcxproj -> D:\DS\DS\Aug-18\Debug\Aug-18-2.exe

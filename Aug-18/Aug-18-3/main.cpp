@@ -13,6 +13,7 @@ void main()
                  \n\t\t3.InDegree\
                   \n\t\t4.OutDegree\
                    \n\t\t5.DFS\
+                    \n\t\t6.BFS\
                     \n\t\t0.Exit\
                     \n\t Enter your choice :";
 		cin >> ch;
@@ -35,6 +36,12 @@ void main()
 			cin >> no;
 			g.DFS(no);
 			break;
+		case 6:
+			cout << "\n\n\t Enter Starting Node ";
+			cin >> no;
+			g.BFS(no);
+			break;
+
 		default:
 			cout << "\n\n\t Wrong choice !!!";
 			break;

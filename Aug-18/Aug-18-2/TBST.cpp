@@ -64,59 +64,57 @@ Node* ThreadBinaryTree::CreateNode(int ele)
 	record->setLThread('T');
 	return record;
 }
-void ThreadBinaryTree::AddNode(int data)
+void ThreadBinaryTree::AddNode(int ele)
 {
-	Node *newnode, *move;
-	newnode = CreateNode(data);
+	Node *temp, *newnode;
+	newnode = CreateNode(ele);
 	if (root == NULL)
 	{
 		root = newnode;
-		cout << "\n\n\t Root Created !!!!";
+		cout << "\nRoot is Created";
 		return;
 	}
-	else
+	temp = root;
+	while (1)
 	{
-		move = root;
-		while (1)
+		if (ele < temp->getData())
 		{
-			if (Data < move->getData())
+			if (temp->getLThread() == 'T')
 			{
-				if (move->getLThread == 'T')
-				{
-					newnode->setLeft(move->getLeft());
-					newnode->setRight(move);
-					move->setLeft(newnode);
-					move->setLThread('L');
-					cout << "\n\n\t Node Added At Left of " << move->getData();
-					break;
-				}
-				else
-					move = move->getLeft();
+				newnode->setLeft(temp->getLeft());
+				newnode->setRight(temp);
+				temp->setLeft(newnode);
+				temp->setLThread('L');
+				cout << "\n\n\t Node Added At Left Of " << temp->getData();
+				break;
 			}
 			else
-				if (Data > move->getData())
-				{
-					if (move->getRThread == 'T')
-					{
-						newnode->setRight(move->getRight());
-						newnode->setLeft(move);
-						move->setRight(newnode);
-						move->setLThread('L');
-						cout << "\n\n\t Node Added At Right of " << move->getData();
-						break;
-					}
-					else
-						move = move->getRight();
-				}
-				else
-				{
-					cout << "\n\n\t Duplicate Not Allowed ";
-					break;
-				}
+				temp = temp->getLeft();
 		}
+		else if (ele > temp->getData())
+		{
+			if (temp->getRThread() == 'T')
+			{
+				newnode->setRight(temp->getRight());
+				newnode->setLeft(temp);
+				temp->setRight(newnode);
+				temp->setRThread('L');
+				cout << "\n\n\t Node Added At Right Of " << temp->getData();
+				break;
+			}
+			else
+				temp = temp->getRight();
+		}
+		else
+		{
+			cout<<"\n\tDuplicate data not allowed";
+			break;
+		}
+
+
 	}
- 
 }
+
 /*void ThreadBinaryTree::Display()
 {
 
@@ -150,16 +148,16 @@ void ThreadBinaryTree::Preorder(Node* root)
 {
 	Node *curr = root;
 	
-	while (curr->getLthread() == 'L')
+	while (curr->getLThread() == 'L')
 	{
 		cout << "   " << curr->getData();
 		curr = curr->getLeft();
 	}
 	while (curr != NULL)
 	{
-		if (curr->getLthread() == 'T')
+		if (curr->getLThread() == 'T')
 			cout << "   " << curr->getData();
-		if (curr->getRthread() == 'T')
+		if (curr->getRThread() == 'T')
 		{
 			curr = curr->getRight();
 		}
@@ -167,7 +165,7 @@ void ThreadBinaryTree::Preorder(Node* root)
 		{
 			curr = curr->getRight();
 			cout << "   " << curr->getData();
-			while (curr->getLthread() == 'L')
+			while (curr->getLThread() == 'L')
 				curr = curr->getLeft();
 		}
 	}

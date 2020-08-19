@@ -1,0 +1,3 @@
+﻿  SelectionSort.cpp
+d:\ds\ds\aug-19\aug-19-3\selectionsort.cpp(33): warning C4101: 'pos': unreferenced local variable
+  Aug-19-3.vcxproj -> D:\DS\DS\Aug-19\Debug\Aug-19-3.exe

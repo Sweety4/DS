@@ -1,4 +1,5 @@
 #include"Graph.h"
+#include<list>
 Graph::Graph()
 {
 	vertex = 5;
@@ -97,6 +98,40 @@ void Graph::TravDFS(int *v, int st)
 			v[j] = 1;
 			cout << " " << j;
 			TravDFS(v, j);
+		}
+	}
+}
+
+void Graph::BFS(int st)
+{
+
+	
+	int *visited = new int[vertex];
+	int i;
+	for (i = 0; i < vertex; i++)
+		visited[i] = 0;
+
+	list<int> queue;
+
+	
+	visited[st] = 1;
+	queue.push_back(st);
+
+	while (!queue.empty())
+	{
+		
+		st = queue.front();
+		cout << st << " ";
+		queue.pop_front();
+
+		for (i = 0; i < vertex; i++)
+		{
+			
+			if (graph[st][i] == 1 && visited[i] == 0)
+			{
+				visited[i] = 1;
+				queue.push_back(i);
+			}
 		}
 	}
 }
