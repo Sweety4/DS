@@ -11,7 +11,7 @@ public:
 	DQueue()
 	{
 		rear = front = -1;
-		size = 5;
+		size = 10;
 		arr = new int[size];
 
 	}
@@ -126,10 +126,24 @@ void main()
 	d1.EnQueueRear(30);
 	d1.EnQueueRear(40);
 	d1.EnQueueFront(50);
+	d1.EnQueueFront(60);
+	//d1.EnQueueFront(70);
+	//d1.EnQueueRear(80);
+	//d1.EnQueueRear(90);
+	//d1.EnQueueFront(100);
+
 
 	d1.Display();
 	d1.DeQueueFront();
 	d1.DeQueueRear();
+	d1.Display();
+	
+	d1.EnQueueRear(130);
+	d1.EnQueueFront(140);
+	d1.Display();
+
+	d1.EnQueueFront(110);
+	d1.EnQueueRear(120);
 	d1.Display();
 	cout << "\n\n\n";
 
